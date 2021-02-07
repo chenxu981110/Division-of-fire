@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2342060_jibstssj33.css">
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: auto;
+            margin: 0px;
+            background-color: #E3EDF8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 16px;
+            padding: 0px 0px 50px 0px;
+
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 60px;
+            border-radius: 25px;
+            width: 90%;
+            box-shadow: 6px 5px 10px 2px #bfc8cf,
+                -3px 0px 5px 1px #fff,
+                inset 15px 15px 10px -15px #b0b9c0, inset -10px -15px 10px -15px #fff;
+            background-color: #E3EDF7;
+            border: 1px solid rgba(255, 255, 255, 0.911);
+            align-items: center;
+            position: fixed;
+            bottom: 10px;
+
+        }
+
+        footer i {
+            color: #6d819c;
+        }
+
+        footer i:hover {
+            color: #84B1ED;
+
+        }
+
+        #header {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 auto;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        #search {
+            width: 90%;
+            margin: 30px auto;
+            text-align: center;
+
+        }
+
+        #search input {
+            width: 90%;
+            border-radius: 100px;
+            outline: none;
+            border: 1px solid #fff;
+            height: 40px;
+            background: url(image/sousuo.png) no-repeat 98% 50%;
+            padding-left: 20px;
+            background-color: #E4EEF5;
+            box-shadow: inset 15px 15px 10px -15px #b0b9c0,
+                inset -10px -15px 10px -15px #fff,
+                2px 2px 5px #bfc8cf;
+        }
+
+        .containers {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+
+        #part1,
+        #part2,
+        #part3 {
+            width: 85%;
+            height: 110px;
+            border-radius: 15px;
+            margin: 10px 0px;
+            box-shadow: inset 15px 15px 10px -15px #b0b9c0,
+                inset -10px -15px 10px -15px #fff,
+                2px 2px 5px #bfc8cf;
+            background-color: #E3EDF7;
+            border: 1px solid rgba(255, 255, 255, 0.911);
+        }
+
+        #part3 {
+            height: 170px;
+
+        }
+
+        #advertise {
+            width: 85%;
+            height: 80px;
+            border: 1px dotted black;
+            margin-bottom: 15px;
+        }
+
+        #part1 p:nth-child(1),
+        #part2 p:nth-child(1),
+        #part3 p:nth-child(1) {
+
+            margin: 14px 30px;
+            font-size: 1em;
+            font-weight: 600;
+            color: #6d819c;
+        }
+
+        #part1 p,
+        #part2 p,
+        #part3 p {
+            font-size: 0.3em;
+            font-weight: 400;
+            color: #6d819c;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #part1 i,
+        #part2 i,
+        #part3 i {
+            color: #6d819c;
+
+        }
+
+        * {
+            touch-action: pan-y;
+        }
+
+        #containers3 {
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            height: 120px;
+
+
+        }
+
+        #containers3 div {
+            width: 25%;
+
+
+        }
+    </style>
+    <link rel="stylesheet" href="dist/dragula.min.css">
+</head>
+
+<body>
+    <div id="header">
+        <i class="iconfont iconlogo1" style="font-size: 28px;color: #6d819c;"></i>
+        <i class="iconfont icongengduo" style="font-size: 15px;color: #6d819c;"></i>
+    </div>
+    <div id="search">
+        <input type="text" placeholder="search">
+    </div>
+    <div id="advertise"></div>
+    <div class="containers">
+        <div id="part1">
+            <p>Part1</p>
+            <div id="containers1"
+                style="display: flex;flex-direction: row;justify-content: space-between;width: 80%;margin: 0 auto;align-items: center;">
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <i class="iconfont iconalipay-fill" style="font-size: 26px;"></i>
+                    <p>支付宝</p>
+                </div>
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <i class="iconfont iconmeituan" style="font-size: 23px;"></i>
+                    <p>美团</p>
+                </div>
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <i class="iconfont iconweibo" style="font-size: 23px;"></i>
+                    <p>微博</p>
+                </div>
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <i class="iconfont icontubiao215" style="font-size: 23px;"></i>
+                    <p>QQ</p>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="part2">
+            <p>Part2</p>
+            <div id="containers2"
+                style="display: flex;flex-direction: row;justify-content: space-between;width: 80%;margin: 0 auto;align-items: center;">
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <i class="iconfont icongithub" style="font-size: 23px;"></i>
+                    <p>github</p>
+                </div>
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <i class="iconfont iconhuabei" style="font-size: 23px;"></i>
+                    <p>花呗</p>
+                </div>
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <i class="iconfont iconlogo-css" style="font-size: 23px;"></i>
+                    <p>Angular</p>
+                </div>
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <i class="iconfont iconlogo-cat" style="font-size: 23px;"></i>
+                    <p>cat</p>
+                </div>
+            </div>
+        </div>
+        <div id="part3">
+            <p>Part3</p>
+            <div id="containers3">
+                <div style="display: flex;flex-direction: column;text-align: center;">
+                    <i class="iconfont iconlogo_skype" style="font-size: 23px;"></i>
+                    <p>skype</p>
+                </div>
+                <div style="display: flex;flex-direction: column;text-align: center;">
+                    <i class="iconfont iconlogo-apple" style="font-size: 23px;"></i>
+                    <p>apple</p>
+                </div>
+                <div style="display: flex;flex-direction: column;text-align: center;">
+                    <i class="iconfont iconelema" style="font-size: 23px;"></i>
+                    <p>饿了么</p>
+                </div>
+                <div style="display: flex;flex-direction: column;text-align: center;">
+                    <i class="iconfont icontwitter-circle-fill" style="font-size: 23px;"></i>
+                    <p>twitter</p>
+                </div>
+
+
+                <div style="display: flex;flex-direction: column;text-align: center;">
+                    <i class="iconfont iconfacebook" style="font-size: 23px;"></i>
+                    <p>脸书</p>
+                </div>
+                <div style="display: flex;flex-direction: column;text-align: center;">
+                    <i class="iconfont iconlogo-xbox" style="font-size: 23px;"></i>
+                    <p>xbox</p>
+                </div>
+                <div style="display: flex;flex-direction: column;text-align: center;">
+                    <i class="iconfont iconlogo-euro" style="font-size: 23px;"></i>
+                    <p>euro</p>
+                </div>
+                <div style="display: flex;flex-direction: column;text-align: center;">
+                    <i class="iconfont iconlogo-sass" style="font-size: 23px;"></i>
+                    <p>sass</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+        <i class="iconfont iconshouye2" style="font-size: 25px;"></i>
+        <i class="iconfont iconxiaoxi1" style="font-size: 25px;"></i>
+        <i class="iconfont iconwendang" style="font-size: 25px;"></i>
+        <i class="iconfont iconwode1" style="font-size: 25px;"></i>
+    </footer>
+
+
+    <script src="dist/dragula.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+        var drake1 = dragula([document.querySelector('#containers1')])
+        var drake2 = dragula([document.querySelector('#containers2')])
+        var drake3 = dragula([document.querySelector('#containers3')])
+
+    </script>
+</body>
+
+</html>

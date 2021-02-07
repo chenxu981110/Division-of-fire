@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2342060_79pdluiem9o.css">
+    <link rel="stylesheet" href="dist/dragula.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            touch-action: pan-y;
+
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: auto;
+            margin: 0px;
+            padding: 0px;
+            font-size: 16px;
+        }
+
+        .hiddenContent {
+            display: none;
+        }
+
+        .activeContent {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            margin: 0px;
+            padding: 0px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+
+
+        }
+
+        footer a {
+            text-decoration: none;
+        }
+
+        footer {
+            height: 120px;
+            width: 100%;
+            position: fixed;
+            bottom: 0px;
+            background-color: #fff;
+            border-top: 2px solid #fff;
+            line-height: 100px;
+
+
+        }
+
+        footer i {
+            color: #7D8DB6;
+        }
+
+        footer a.active i {
+            color: #1BB0B0;
+        }
+
+        footer i:hover {
+            color: #1BB0B0;
+
+        }
+
+        /******首页content1**********************************************************************************/
+        #header {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 auto;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 30px;
+        }
+
+        #advertise {
+            width: 80%;
+            height: 80px;
+            /* background: linear-gradient(to left bottom, #96ebeb, #29B5B5);*/
+            border: 1px solid black;
+            margin: 0px auto 15px;
+            border-radius: 15px;
+
+
+        }
+
+        .containers {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+
+
+        #part2,
+        #part3 {
+            width: 80%;
+            margin: 30px 0px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #F4F8FF;
+            border-radius: 25px;
+            height: auto;
+            padding: 10px 10px;
+
+        }
+
+        #part1 {
+            width: 80%;
+            background-color: #F4F8FF;
+            border-radius: 25px;
+            height: auto;
+            padding: 10px 10px;
+        }
+
+        #part3 {
+            margin-bottom: 120px;
+        }
+
+        #containers1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        /*******我的content5*****************************************************************************/
+        #content5 {
+            padding-bottom: 100px;
+        }
+
+        #content5 p {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /*******消息content2*****************************************************************************/
+
+
+        #content2 ul {
+            list-style: none;
+            width: 100%;
+            padding: 0px;
+
+        }
+
+        #content2 a {
+            width: 80%;
+            border: 1px solid #E6EFFB;
+            border-radius: 10px;
+            height: 60px;
+            background-color: #fff;
+            display: block;
+            margin: 10px auto;
+
+
+        }
+
+        #content2 li {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        #content2 li div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+
+        #content2 li div i {
+            margin-right: 15px;
+
+        }
+
+        #content2 li div p {
+            color: #444d67;
+            font-size: 1em;
+
+        }
+
+        #title2 {
+            margin: 50px auto 0px;
+            color: #303E65;
+            font-weight: 800;
+            font-size: 1.1em;
+        }
+
+        #content2,
+        #content3 {
+            height: 100%;
+        }
+
+        #content5 {
+            height: auto;
+            padding-bottom: 120px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div id="content1" class="activeContent">
+        <!--title1-->
+        <div id="header">
+            <div style="border:1px #e8ecf6 solid;width: 40px;height: 40px;border-radius: 10px;text-align: center;line-height: 40px;
+                background-color: #fff;">
+                <i class="iconfont iconsearch" style="font-size: 20px;color: #444d67;font-weight: 600;"></i>
+            </div>
+            <i class="iconfont iconlogo1" style="font-size: 30px;color: #444d67;margin-right: 10px;"></i>
+
+
+            <div style="border:1px #e8ecf6 solid;width: 40px;height: 40px;border-radius: 10px;text-align: center;
+                line-height: 40px;background-color: #fff;">
+                <i class="iconfont icongengduo1" style="font-size: 20px;color: #444d67;"></i>
+            </div>
+        </div>
+        <!--advertise-->
+        <div id="advertise"></div>
+        <!--content-->
+        <div class="containers">
+            <div id="part1">
+                <p style="padding: 0px;margin: 10px 5px;font-size: 0.8em;font-weight: 600;color: #303E65;">我的科研</p>
+                <div id="containers1">
+
+                    <div>
+                        <div
+                            style="width:45px;height: 45px;border-radius: 15px;background-color: #5675E3;line-height: 45px;text-align: center;margin-bottom: 5px;">
+                            <i class="iconfont iconguanli" style="font-size: 25px;color: #fff;"></i>
+                        </div>
+                        <p style="padding:0px;margin: 0px;font-weight: 600;font-size: 0.5em;">项目管理</p>
+                    </div>
+                    <div>
+                        <div
+                            style="width:45px;height: 45px;border-radius: 15px;background-color: #3EB4F5;line-height: 45px;text-align: center;margin-bottom: 5px;">
+                            <i class="iconfont iconfangxiangbiao-shi" style="font-size: 25px;color: #fff;"></i>
+                        </div>
+                        <p style="padding:0px;margin: 0px;font-weight: 600;font-size: 0.5em;">科研方向</p>
+                    </div>
+                    <div>
+                        <div
+                            style="width:45px;height: 45px;border-radius: 15px;background-color: #FF844F;line-height: 45px;text-align: center;margin-bottom: 5px;">
+                            <i class="iconfont iconw_xuesheng-" style="font-size: 25px;color: #fff;"></i>
+                        </div>
+                        <p style="padding:0px;margin: 0px;font-weight: 600;font-size: 0.5em;">学生管理</p>
+                    </div>
+                    <div>
+                        <div
+                            style="width:45px;height: 45px;border-radius: 15px;background-color: #FA5A7D;line-height: 45px;text-align: center;margin-bottom: 5px;">
+                            <i class="iconfont iconjingfeibaozhang" style="font-size: 18px;color: #fff;"></i>
+                        </div>
+                        <p style="padding:0px;margin: 0px;font-weight: 600;font-size: 0.5em;">经费管理</p>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div id="part2">
+                <p style="padding: 0px;margin: 0px 15px ;font-size: 0.8em;font-weight: 600;color: #303E65;">日常工作</p>
+                <div id="containers2">
+                    <div
+                        style="display: flex;flex-direction: row;align-items: center;
+                                                        height: 40px;line-height:40px;width: 100%;margin: 10px auto;padding: 0px 10px;">
+                        <div
+                            style="width: 35px;height: 35px;border-radius: 10px;background-color: #5675E3;margin-right: 10px;line-height: 35px;text-align: center;">
+                            <i class="iconfont iconziyuan154" style="font-size: 15px;color: #fff;">
+                            </i>
+                        </div>
+                        <div
+                            style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 80%;border-bottom: 1px solid  #E6EFFB;">
+                            <p style="font-size: 0.9em;color: #303E65;font-weight: 600;padding:0px ;margin: 0px;">工作日志
+                            </p>
+                            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
+                        </div>
+                    </div>
+                    <div
+                        style="display: flex;flex-direction: row;align-items: center;
+                                                                            height: 40px;line-height:40px;width: 100%;margin: 10px auto;padding: 0px 10px;">
+                        <div
+                            style="width: 35px;height: 35px;border-radius: 10px;background-color: #3EB4F5;margin-right: 10px;line-height: 35px;text-align: center;">
+                            <i class="iconfont iconjilumian" style="font-size: 15px;color: #fff;">
+                            </i>
+                        </div>
+                        <div
+                            style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 80%;border-bottom: 1px solid  #E6EFFB;">
+                            <p style="font-size: 0.9em;color: #303E65;font-weight: 600;padding:0px ;margin: 0px;">进展记录
+                            </p>
+                            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
+                        </div>
+                    </div>
+
+
+                    <div
+                        style="display: flex;flex-direction: row;align-items: center;
+                                                                            height: 40px;line-height:40px;width: 100%;margin: 10px auto;padding: 0px 10px;">
+                        <div
+                            style="width: 35px;height: 35px;border-radius: 10px;background-color: #FF844F;margin-right: 10px;line-height: 35px;text-align: center;">
+                            <i class="iconfont iconbeiwanglushili" style="font-size: 15px;color: #fff;">
+                            </i>
+                        </div>
+                        <div
+                            style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 80%;border-bottom: 1px solid  #E6EFFB;">
+                            <p style="font-size: 0.9em;color: #303E65;font-weight: 600;padding:0px ;margin: 0px;">想法备忘录
+                            </p>
+                            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
+                        </div>
+                    </div>
+                    <div
+                        style="display: flex;flex-direction: row;align-items: center;
+                                                                            height: 40px;line-height:40px;width: 100%;margin: 10px auto;padding: 0px 10px;">
+                        <div
+                            style="width: 35px;height: 35px;border-radius: 10px;background-color: #FA5A7D;margin-right: 10px;line-height: 35px;text-align: center;">
+                            <i class="iconfont iconwenxianliutong" style="font-size: 15px;color: #fff;">
+                            </i>
+                        </div>
+                        <div
+                            style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 80%;border-bottom: 1px solid  #E6EFFB;">
+                            <p style="font-size: 0.9em;color: #303E65;font-weight: 600;padding:0px ;margin: 0px;">文献日志
+                            </p>
+                            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div id="part3">
+                <p style="padding: 0px;margin: 0px 15px ;font-size: 0.8em;font-weight: 600;color: #303E65;">学术交流</p>
+                <div id="containers3">
+                    <div
+                        style="display: flex;flex-direction: row;align-items: center;
+                                                                    height: 40px;line-height:40px;width: 100%;margin: 10px auto;padding: 0px 10px;">
+                        <div
+                            style="width: 35px;height: 35px;border-radius: 10px;background-color: #5675E3;margin-right: 10px;line-height: 35px;text-align: center;">
+                            <i class="iconfont iconhuiyishi2" style="font-size: 18px;color: #fff;">
+                            </i>
+                        </div>
+                        <div
+                            style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 80%;border-bottom: 1px solid  #E6EFFB;">
+                            <p style="font-size: 0.9em;color: #303E65;font-weight: 600;padding:0px ;margin: 0px;">会议活动
+                            </p>
+                            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
+                        </div>
+                    </div>
+                    <div
+                        style="display: flex;flex-direction: row;align-items: center;
+                                                                                        height: 40px;line-height:40px;width: 100%;margin: 10px auto;padding: 0px 10px;">
+                        <div
+                            style="width: 35px;height: 35px;border-radius: 10px;background-color: #22B07D;margin-right: 10px;line-height: 35px;text-align: center;">
+                            <i class="iconfont iconjiaoliuxuanzhong" style="font-size: 25px;color: #fff;">
+                            </i>
+                        </div>
+                        <div
+                            style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 80%;border-bottom: 1px solid  #E6EFFB;">
+                            <p style="font-size: 0.9em;color: #303E65;font-weight: 600;padding:0px ;margin: 0px;">交流方向
+                            </p>
+                            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
+                        </div>
+                    </div>
+
+
+                    <div
+                        style="display: flex;flex-direction: row;align-items: center;
+                                                                                        height: 40px;line-height:40px;width: 100%;margin: 10px auto;padding: 0px 10px;">
+                        <div
+                            style="width: 35px;height: 35px;border-radius: 10px;background-color: #FF7593;margin-right: 10px;line-height: 35px;text-align: center;">
+                            <i class="iconfont iconchanyejishulianmeng" style="font-size: 15px;color: #fff;">
+                            </i>
+                        </div>
+                        <div
+                            style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 80%;border-bottom: 1px solid  #E6EFFB;">
+                            <p style="font-size: 0.9em;color: #303E65;font-weight: 600;padding:0px ;margin: 0px;">产业合作
+                            </p>
+                            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div id="content2" class="hiddenContent">
+        <p id="title2">消息</p>
+        <ul>
+
+            <a href="chat.html" style="text-decoration: none;">
+                <li>
+                    <div>
+                        <div
+                            style="width: 40px;height: 40px;border-radius: 10px;background-color: #5675E3;margin-right: 10px;">
+                            <i class="iconfont iconxiaoxixinfengnews2"
+                                style="font-size: 19px;color: #fff;margin: 0 auto;"></i>
+                        </div>
+                        <p style="font-size: 0.9em;color: #303E65;font-weight: 600;">聊天</p>
+                    </div>
+                    <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
+                </li>
+            </a>
+
+
+            <a href="address-book.html" style="text-decoration: none;">
+                <li>
+                    <div>
+                        <div
+                            style="width: 40px;height: 40px;border-radius: 10px;background-color: #3EB4F5;margin-right: 10px;">
+                            <i class="iconfont icontongxunlu" style="font-size: 20px;color: #fff;margin: 0 auto;"></i>
+                        </div>
+                        <p style="font-size: 0.9em;color: #303E65;font-weight: 600;">通讯录</p>
+                    </div>
+                    <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
+                </li>
+            </a>
+
+
+            <a href="messages.html" style="text-decoration: none;color: #444d67;">
+                <li>
+                    <div>
+                        <div
+                            style="width: 40px;height: 40px;border-radius: 10px;background-color: #FF844F;margin-right: 10px;">
+                            <i class="iconfont iconyanzhengma" style="font-size: 20px;color: #fff;margin: 0 auto;"></i>
+                        </div>
+                        <p style="font-size: 0.9em;color: #303E65;font-weight: 600;">验证消息</p>
+                    </div>
+                    <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
+                </li>
+            </a>
+
+
+            <a href="system-informs.html" style="text-decoration: none;color: #444d67;">
+                <li>
+                    <div>
+                        <div
+                            style="width: 40px;height: 40px;border-radius: 10px;background-color: #FA5A7D;margin-right: 10px;">
+                            <i class="iconfont iconshezhi" style="font-size: 25px;color: #fff;margin: 0 auto;"></i>
+                        </div>
+                        <p style="font-size: 0.9em;color: #303E65;font-weight: 600;">系统通知</p>
+                    </div>
+                    <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
+                </li>
+            </a>
+
+        </ul>
+
+    </div>
+    <div id="content3" class="hiddenContent">
+        <div
+            style="display: flex;flex-direction: row;justify-content:space-between;align-items: center;width: 80%;margin: 40px auto 0px;">
+            <div
+                style="border:1px #e8ecf6 solid;width: 40px;height: 40px;border-radius: 10px;text-align: center;line-height: 40px;">
+                <i class="iconfont iconsearch" style="font-size: 20px;color: #444d67;font-weight: 600;"></i>
+            </div>
+            <p>日历</p>
+            <div style="display: flex;flex-direction: row;">
+                <div
+                    style="border:1px #e8ecf6 solid;width: 40px;height: 40px;border-radius: 10px;text-align: center;line-height: 40px;margin-right: 10px;">
+                    <i class="iconfont iconlishijilu" style="font-size: 20px;color: #444d67;font-weight: 600;"></i>
+                </div>
+                <div
+                    style="border:1px #e8ecf6 solid;width: 40px;height: 40px;border-radius: 10px;text-align: center;line-height: 40px;">
+                    <i class="iconfont iconicon-" style="font-size: 20px;color: #444d67;font-weight: 600;"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="calendar">
+            <div class="header">
+                <a data-action="prev-month" href="javascript:void(0)" title="Previous Month"><i></i></a>
+                <div class="text" data-render="month-year"></div>
+                <a data-action="next-month" href="javascript:void(0)" title="Next Month"><i></i></a>
+            </div>
+            <div class="months" data-flow="left">
+                <div class="month month-a">
+                    <div class="render render-a"></div>
+                </div>
+                <div class="month month-b">
+                    <div class="render render-b"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content4" class="hiddenContent">
+        <!--title-->
+        <div
+            style="display: flex;flex-direction: row;justify-content:space-between;align-items: center;width: 80%;margin: 40px auto 0px;">
+            <div
+                style="border:1px #e8ecf6 solid;width: 40px;height: 40px;border-radius: 10px;text-align: center;line-height: 40px;">
+                <i class="iconfont icongengduo2" style="font-size: 20px;color: #444d67;"></i>
+            </div>
+            <p style="color: #303E65;font-weight: 800;font-size: 1.1em;">文档</p>
+            <div
+                style="border:1px #e8ecf6 solid;width: 40px;height: 40px;border-radius: 10px;text-align: center;line-height: 40px;">
+                <i class="iconfont iconsearch" style="font-size: 20px;color: #444d67;font-weight: 600;"></i>
+            </div>
+        </div>
+
+        <!--content1-->
+        <div
+            style="display: flex;flex-direction: row;align-items: center;width: 80%;margin: 20px auto;justify-content: space-between;">
+            <div>
+                <div
+                    style="background-color:#F1F6FE;width: 140px;height: 120px;border-radius:15px;text-align: center;line-height: 120px;">
+                    <i class=" iconfont iconwenjianjia" style="font-size: 50px;color: #1BB0B0;"></i>
+                </div>
+                <div
+                    style="display: flex;flex-direction: row;align-items: center;width: 130px;justify-content: space-between;">
+                    <p style="font-size: 0.9em;color: #35436A;font-weight: 600;padding: 0px;margin:10px 0px 5px 10px;">
+                        资料类
+                    </p>
+                    <i class=" iconfont icongengduo1" style="font-size: 20px;color: #7C8DB5;"></i>
+                </div>
+                <p style="color: #7D8EB7;font-size: 0.7em;font-weight: 500;padding: 0px;margin: 0px 0px 0px 10px;">80
+                    files</p>
+            </div>
+            <div>
+                <div
+                    style="background-color:#F1F6FE;width: 140px;height: 120px;border-radius:15px;text-align: center;line-height: 120px;">
+                    <i class=" iconfont iconwenjianjia" style="font-size: 50px;color: #1BB0B0;"></i>
+                </div>
+                <div
+                    style="display: flex;flex-direction: row;align-items: center;width: 130px;justify-content: space-between;">
+                    <p style="font-size: 0.9em;color: #35436A;font-weight: 600;padding: 0px;margin:10px 0px 5px 10px;">
+                        成果类
+                    </p>
+                    <i class=" iconfont icongengduo1" style="font-size: 20px;color: #7C8DB5;"></i>
+                </div>
+                <p style="color: #7D8EB7;font-size: 0.7em;font-weight: 500;padding: 0px;margin: 0px 0px 0px 10px;">500
+                    files</p>
+            </div>
+        </div>
+        <!--content2-->
+        <div
+            style="display: flex;flex-direction: row;align-items: center;width: 80%;margin: 20px auto;justify-content: space-between;">
+            <div>
+                <div
+                    style="background-color:#F1F6FE;width: 140px;height: 120px;border-radius:15px;text-align: center;line-height: 120px;">
+                    <i class=" iconfont iconwenjianjia" style="font-size: 50px;color: #1BB0B0;"></i>
+                </div>
+                <div
+                    style="display: flex;flex-direction: row;align-items: center;width: 130px;justify-content: space-between;">
+                    <p style="font-size: 0.9em;color: #35436A;font-weight: 600;padding: 0px;margin:10px 0px 5px 10px;">
+                        文献类
+                    </p>
+                    <i class=" iconfont icongengduo1" style="font-size: 20px;color: #7C8DB5;"></i>
+                </div>
+                <p style="color: #7D8EB7;font-size: 0.7em;font-weight: 500;padding: 0px;margin: 0px 0px 0px 10px;">5
+                    files</p>
+            </div>
+            <div>
+                <div
+                    style="background-color:#F1F6FE;width: 140px;height: 120px;border-radius:15px;text-align: center;line-height: 120px;">
+                    <i class=" iconfont iconwenjianjia" style="font-size: 50px;color: #1BB0B0;"></i>
+                </div>
+                <div
+                    style="display: flex;flex-direction: row;align-items: center;width: 130px;justify-content: space-between;">
+                    <p style="font-size: 0.9em;color: #35436A;font-weight: 600;padding: 0px;margin:10px 0px 5px 10px;">
+                        临时文件
+                    </p>
+                    <i class=" iconfont icongengduo1" style="font-size: 20px;color: #7C8DB5;"></i>
+                </div>
+                <p style="color: #7D8EB7;font-size: 0.7em;font-weight: 500;padding: 0px;margin: 0px 0px 0px 10px;">705
+                    files</p>
+            </div>
+        </div>
+        <!--content3-->
+        <div style="width: 80%;margin: 0 auto 120px;">
+            <div
+                style="background-color:#F1F6FE;width: 140px;height: 120px;border-radius:15px;text-align: center;line-height: 120px;">
+                <i class=" iconfont iconwenjianjia" style="font-size: 50px;color: #1BB0B0;"></i>
+            </div>
+
+            <div
+                style="display: flex;flex-direction: row;align-items: center;width: 130px;justify-content: space-between;">
+                <p style="font-size: 0.9em;color: #35436A;font-weight: 600;padding: 0px;margin:10px 0px 5px 10px;">回收站
+                </p>
+                <i class=" iconfont icongengduo1" style="font-size: 20px;color: #7C8DB5;"></i>
+            </div>
+            <p style="color: #7D8EB7;font-size: 0.7em;font-weight: 500;padding: 0px;margin:0px 0px 0px 10px;">10 files
+            </p>
+        </div>
+    </div>
+
+    <div id="content5" class="hiddenContent">
+
+        <div style="width: 80%;height: 300px;border-radius: 25px;background:linear-gradient(to right top, #55C2C4,#25B4B4);margin: 40px auto ;display: flex;
+        flex-direction: column;align-items: center;">
+            <div style="display: flex;flex-direction: row;margin:40px auto 30px;background-color: rgba(255,255,255,0.3);
+            padding: 5px 10px;border-radius:10px ;">
+                <p style="color: #fff;font-size: 0.9em;font-weight: 500;">请先登录</p>
+                <i class="iconfont iconarrow-right" style="font-size: 12px;color:#fff ;font-weight: 600;"></i>
+            </div>
+            <img src="image/touxiang.jpg" style="width: 80px;height: 80px;border-radius: 50%;margin-bottom: 40px;">
+            <div
+                style="display: flex;flex-direction: row;width: 65%;justify-content: space-between;margin-bottom: 10px;">
+                <div style="display: flex;flex-direction: row;">
+                    <i class="iconfont iconguanzhu" style="font-size: 15px;color: #fff;margin-right: 5px;"></i>
+                    <p style="font-size: 0.5em;color: #fff;font-weight: 600;">我的关注</p>
+                </div>
+                <div style="display: flex;flex-direction: row;">
+                    <i class="iconfont iconshoucang" style="font-size: 12px;color: #fff;margin-right: 5px;"></i>
+                    <p style="font-size: 0.5em;color: #fff;font-weight: 600;">我的收藏</p>
+                </div>
+            </div>
+            <div style="display: flex;flex-direction: row;width: 65%;justify-content: space-between;">
+                <div style="display: flex;flex-direction: row;">
+                    <i class="iconfont icondingyue" style="font-size:12px;color: #fff;margin-right: 5px;"></i>
+                    <p style="font-size: 0.5em;color: #fff;font-weight: 600;">我的订阅</p>
+                </div>
+                <div style="display: flex;flex-direction: row;">
+                    <i class="iconfont icontubiao_lianmeng-yaoqingma"
+                        style="font-size: 13px;color: #fff;margin-right: 5px;"></i>
+                    <p style="font-size: 0.5em;color: #fff;font-weight: 600;">邀请好友</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 80%;justify-content: space-between;display: flex;flex-direction: row;margin: 0 auto;">
+
+            <div>
+                <div style="width: 50px;height: 50px;border-radius: 10px;background-color: #F4F8FF;
+                    line-height: 50px;text-align: center;margin-bottom: 10px;">
+                    <i class="iconfont iconwodechengguo" style="font-size: 18px;color: #5675E3;">
+                    </i>
+                </div>
+                <p style="font-size: 0.6em;color: #303E65;font-weight: 600;">我的成果</p>
+            </div>
+
+            <div>
+                <div style="width: 50px;height: 50px;border-radius: 10px;background-color: #F4F8FF;
+                                    line-height: 50px;text-align: center;margin-bottom: 10px;">
+                    <i class="iconfont iconhuiyi" style="font-size: 25px;color: #22B07D;">
+                    </i>
+                </div>
+                <p style="font-size: 0.6em;color: #303E65;font-weight: 600;">我的会议</p>
+            </div>
+
+            <div>
+                <div style="width: 50px;height: 50px;border-radius: 10px;background-color: #F4F8FF;
+                                        line-height: 50px;text-align: center;margin-bottom: 10px;">
+                    <i class="iconfont iconshuju" style="font-size: 25px;color: #FF7593;">
+                    </i>
+                </div>
+                <p style="font-size: 0.6em;color: #303E65;font-weight: 600;">科研数据</p>
+            </div>
+
+            <div>
+                <div style="width: 50px;height: 50px;border-radius: 10px;background-color: #F4F8FF;
+                                            line-height: 50px;text-align: center;margin-bottom: 10px;">
+                    <i class="iconfont iconxuqiuzhitongche" style="font-size: 20px;color: #3391E7;">
+                    </i>
+                </div>
+                <p style="font-size: 0.6em;color: #303E65;font-weight: 600;">科研需求</p>
+            </div>
+        </div>
+
+        <div style="display: flex;flex-direction: row;justify-content:space-between;align-items: center;border: 1px solid #E6EFFB;border-radius: 15px;
+                        height: 60px;line-height: 60px;width: 80%;margin: 30px auto 10px;padding: 0px 10px;">
+            <div style="display: flex;flex-direction: row;align-items: center;">
+                <div
+                    style="width: 35px;height: 35px;border-radius: 10px;background-color: #FD8451;margin-right: 10px;line-height: 35px;text-align: center;">
+                    <i class="iconfont icongengxin" style="font-size: 20px;color: #fff;">
+                    </i>
+                </div>
+                <p style="font-size: 0.9em;color: #303E65;font-weight: 600;">软件更新</p>
+            </div>
+            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
+        </div>
+
+        <div style="display: flex;flex-direction: row;justify-content:space-between;align-items: center;border: 1px solid #E6EFFB;border-radius: 15px;
+                                height: 60px;line-height: 60px;width: 80%;margin: 10px auto;padding: 0px 10px;">
+            <div style="display: flex;flex-direction: row;align-items: center;">
+                <div
+                    style="width: 35px;height: 35px;border-radius: 10px;background-color: #5776E2;margin-right: 10px;line-height: 35px;text-align: center;">
+                    <i class="iconfont iconyijianfankui" style="font-size: 15px;color: #fff;">
+                    </i>
+                </div>
+                <p style="font-size: 0.9em;color: #303E65;font-weight: 600;">意见反馈</p>
+            </div>
+            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
+        </div>
+
+        <div style="display: flex;flex-direction: row;justify-content:space-between;align-items: center;border: 1px solid #E6EFFB;border-radius: 15px;
+                                height: 60px;line-height: 60px;width: 80%;margin: 10px auto;padding: 0px 10px;">
+            <div style="display: flex;flex-direction: row;align-items: center;">
+                <div
+                    style="width: 35px;height: 35px;border-radius: 10px;background-color: #F95B7E;margin-right: 10px;line-height: 35px;text-align: center;">
+                    <i class="iconfont iconguanyuwomen" style="font-size: 15px;color: #fff;">
+                    </i>
+                </div>
+                <p style="font-size: 0.9em;color: #303E65;font-weight: 600;">关于我们</p>
+            </div>
+            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div style="width:80%;
+            height:1px;
+            background: -webkit-linear-gradient(left, #fff -4%,#D6E3F4 50%,#fff 100%);margin: 0 auto;"></div>
+        <ul style="list-style: none;display: flex;margin: 0px auto;padding: 0px;flex-direction: row;justify-content: space-between;align-items: center;
+        width: 80%;">
+            <li>
+                <a id="tab1" onclick="change(1)" class="active">
+                    <i class="iconfont iconshouye2" style="font-size: 25px;">
+                    </i>
+                </a>
+            </li>
+            <li>
+                <a id="tab2" onclick="change(2)">
+                    <i class="iconfont iconxiaoxi1" style="font-size: 25px;">
+                    </i>
+                </a>
+            </li>
+            <li
+                style="width: 55px;height:55px;text-align: center;line-height: 55px;border-radius: 50%;background-color: #1AB0B0;">
+                <a id="tab3" onclick="change(3)">
+                    <i class="iconfont iconcalendar-fill" style="font-size: 23px;color: white;">
+                    </i>
+                </a>
+            </li>
+            <li>
+                <a id="tab4" onclick="change(4)">
+                    <i class="iconfont iconwenjianjia" style="font-size: 25px;">
+                    </i>
+                </a>
+            </li>
+            <li>
+                <a id="tab5" onclick="change(5)">
+                    <i class="iconfont iconwode1" style="font-size: 28px;">
+                    </i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/index.js" charset="utf-8"></script>
+    <script src="dist/dragula.min.js" charset="utf-8"></script>
+    <script>
+
+        function change(number) {
+            for (i = 1; i <= 5; i++) {
+                tab = document.getElementById("tab" + i);
+                content = document.getElementById("content" + i);
+                if (i == number) {
+                    tab.className = "active";
+                    content.className = "activeContent";
+                }
+                else {
+                    tab.className = "";
+                    content.className = "hiddenContent";
+                }
+            }
+        }
+
+
+
+
+        var drake1 = dragula([document.querySelector('#containers1')])
+        var drake2 = dragula([document.querySelector('#containers2')])
+        var drake3 = dragula([document.querySelector('#containers3')])
+    </script>
+
+
+</body>
+
+</html>
