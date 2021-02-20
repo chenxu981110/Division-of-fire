@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_2342060_79pdluiem9o.css">
     <link rel="stylesheet" href="dist/dragula.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
     <style>
         * {
             touch-action: pan-y;
@@ -86,11 +86,10 @@
 
         #advertise {
             width: 80%;
-            height: 80px;
-            /* background: linear-gradient(to left bottom, #96ebeb, #29B5B5);*/
-            border: 1px solid black;
+            height: 100px;
+            background: #F2F6FE;
             margin: 0px auto 15px;
-            border-radius: 15px;
+            border-radius: 10px;
 
 
         }
@@ -106,35 +105,32 @@
 
 
         #part2,
-        #part3 {
-            width: 80%;
-            margin: 30px 0px 0px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background-color: #F4F8FF;
-            border-radius: 25px;
-            height: auto;
-            padding: 10px 10px;
-
-        }
-
+        #part3,
         #part1 {
-            width: 80%;
-            background-color: #F4F8FF;
+            width: 70%;
+            border: 1px solid #F4F8FF;
             border-radius: 25px;
             height: auto;
-            padding: 10px 10px;
+            padding: 10px 20px;
+            margin: 10px auto;
+
         }
 
         #part3 {
             margin-bottom: 120px;
         }
 
-        #containers1 {
+        #containers1,
+        #containers2 {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+        }
+
+        #containers3 {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
         }
 
         /*******我的content5*****************************************************************************/
@@ -204,16 +200,145 @@
             font-size: 1.1em;
         }
 
-        #content2,
-        #content3 {
-            height: 100%;
-        }
 
         #content5 {
             height: auto;
             padding-bottom: 120px;
         }
+
+
+
+
+
+
+
+        /****************************************************************************************/
+        .cldBody {
+
+            width: 80%;
+            margin: 10px auto;
+            color: #303E66;
+
+        }
+
+        .cldBody .top {
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            position: relative;
+        }
+
+        #topDate {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        #week td {
+            font-size: 10px;
+            font-weight: 600;
+
+        }
+
+        tr {
+            background-color: #F2F6FE;
+        }
+
+        td {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        #tbody td:hover {
+            background: #fff;
+            cursor: pointer;
+        }
+
+        .curDate {
+            color: #fff;
+            font-weight: 600;
+            background-color: #1EB0B2;
+
+        }
+
+        .curDate:hover {
+            background: #fff;
+            color: #303E66;
+            font-weight: 400;
+
+        }
+
+        #left,
+        #right {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        #left {
+            left: 0;
+        }
+
+        #right {
+            right: 0;
+        }
+
+        #left:hover,
+        #right:hover {
+            background-color: #fff;
+        }
+
+        /*****************************************************/
+        #list {
+            list-style: none;
+            display: none;
+            width: 120px;
+            height: auto;
+            background: #313F66;
+            position: absolute;
+            right: 10px;
+            padding: 0px;
+            border-radius: 10px;
+        }
+
+        #list a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.5em;
+        }
+
+        #angle {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid #313F66;
+            display: none;
+            position: relative;
+            top: 16px;
+            left: 15px;
+
+
+        }
     </style>
+    <script>
+        window.onload = function () {
+            var more = document.getElementById("more");
+            var list = document.getElementById("list");
+            var angle = document.getElementById("angle");
+            var style = list.style;
+            var angleStyle = angle.style;
+
+            more.onclick = function () {
+                angleStyle.display = style.display == "block" ? "none" : "block";
+                style.display = style.display == "block" ? "none" : "block";
+
+            };
+        }
+    </script>
 </head>
 
 <body>
@@ -233,7 +358,15 @@
 
             <div style="border:1px #e8ecf6 solid;width: 40px;height: 40px;border-radius: 10px;text-align: center;
                 line-height: 40px;background-color: #fff;">
-                <i class="iconfont icongengduo1" style="font-size: 20px;color: #444d67;"></i>
+                <i class="iconfont icongengduo1" style="font-size: 20px;color: #444d67;cursor: pointer;" id="more"></i>
+                <div id="angle"></div>
+                <ul id="list">
+                    <li><a href="#">分享</a></li>
+                    <li><a href="#">关注/收藏</a></li>
+                    <li><a href="#">图文识别</a></li>
+                    <li><a href="#">拍照</a></li>
+                    <li><a href="#">导入/导出</a></li>
+                </ul>
             </div>
         </div>
         <!--advertise-->
@@ -246,29 +379,29 @@
 
                     <div>
                         <div
-                            style="width:45px;height: 45px;border-radius: 15px;background-color: #5675E3;line-height: 45px;text-align: center;margin-bottom: 5px;">
-                            <i class="iconfont iconguanli" style="font-size: 25px;color: #fff;"></i>
+                            style="width:45px;height: 45px;border-radius: 15px;background-color: #F1F5FE;line-height: 45px;text-align: center;margin-bottom: 5px;">
+                            <i class="iconfont iconguanli" style="font-size: 25px;color: #1AAFB0;"></i>
                         </div>
                         <p style="padding:0px;margin: 0px;font-weight: 600;font-size: 0.5em;">项目管理</p>
                     </div>
                     <div>
                         <div
-                            style="width:45px;height: 45px;border-radius: 15px;background-color: #3EB4F5;line-height: 45px;text-align: center;margin-bottom: 5px;">
-                            <i class="iconfont iconfangxiangbiao-shi" style="font-size: 25px;color: #fff;"></i>
+                            style="width:45px;height: 45px;border-radius: 15px;background-color: #F1F5FE;line-height: 45px;text-align: center;margin-bottom: 5px;">
+                            <i class="iconfont iconfangxiangbiao-shi" style="font-size: 25px;color: #1AAFB0;"></i>
                         </div>
                         <p style="padding:0px;margin: 0px;font-weight: 600;font-size: 0.5em;">科研方向</p>
                     </div>
                     <div>
                         <div
-                            style="width:45px;height: 45px;border-radius: 15px;background-color: #FF844F;line-height: 45px;text-align: center;margin-bottom: 5px;">
-                            <i class="iconfont iconw_xuesheng-" style="font-size: 25px;color: #fff;"></i>
+                            style="width:45px;height: 45px;border-radius: 15px;background-color: #F1F5FE;line-height: 45px;text-align: center;margin-bottom: 5px;">
+                            <i class="iconfont iconw_xuesheng-" style="font-size: 25px;color: #1AAFB0;"></i>
                         </div>
                         <p style="padding:0px;margin: 0px;font-weight: 600;font-size: 0.5em;">学生管理</p>
                     </div>
                     <div>
                         <div
-                            style="width:45px;height: 45px;border-radius: 15px;background-color: #FA5A7D;line-height: 45px;text-align: center;margin-bottom: 5px;">
-                            <i class="iconfont iconjingfeibaozhang" style="font-size: 18px;color: #fff;"></i>
+                            style="width:45px;height: 45px;border-radius: 15px;background-color: #F1F5FE;line-height: 45px;text-align: center;margin-bottom: 5px;">
+                            <i class="iconfont iconjingfeibaozhang" style="font-size: 18px;color: #1AAFB0;"></i>
                         </div>
                         <p style="padding:0px;margin: 0px;font-weight: 600;font-size: 0.5em;">经费管理</p>
                     </div>
@@ -279,69 +412,36 @@
 
             </div>
             <div id="part2">
-                <p style="padding: 0px;margin: 0px 15px ;font-size: 0.8em;font-weight: 600;color: #303E65;">日常工作</p>
+                <p style="padding: 0px;margin: 10px 5px;font-size: 0.8em;font-weight: 600;color: #303E65;">日常工作</p>
                 <div id="containers2">
-                    <div
-                        style="display: flex;flex-direction: row;align-items: center;
-                                                        height: 40px;line-height:40px;width: 100%;margin: 10px auto;padding: 0px 10px;">
-                        <div
-                            style="width: 35px;height: 35px;border-radius: 10px;background-color: #5675E3;margin-right: 10px;line-height: 35px;text-align: center;">
-                            <i class="iconfont iconziyuan154" style="font-size: 15px;color: #fff;">
-                            </i>
-                        </div>
-                        <div
-                            style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 80%;border-bottom: 1px solid  #E6EFFB;">
-                            <p style="font-size: 0.9em;color: #303E65;font-weight: 600;padding:0px ;margin: 0px;">工作日志
-                            </p>
-                            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
-                        </div>
-                    </div>
-                    <div
-                        style="display: flex;flex-direction: row;align-items: center;
-                                                                            height: 40px;line-height:40px;width: 100%;margin: 10px auto;padding: 0px 10px;">
-                        <div
-                            style="width: 35px;height: 35px;border-radius: 10px;background-color: #3EB4F5;margin-right: 10px;line-height: 35px;text-align: center;">
-                            <i class="iconfont iconjilumian" style="font-size: 15px;color: #fff;">
-                            </i>
-                        </div>
-                        <div
-                            style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 80%;border-bottom: 1px solid  #E6EFFB;">
-                            <p style="font-size: 0.9em;color: #303E65;font-weight: 600;padding:0px ;margin: 0px;">进展记录
-                            </p>
-                            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
-                        </div>
-                    </div>
 
-
-                    <div
-                        style="display: flex;flex-direction: row;align-items: center;
-                                                                            height: 40px;line-height:40px;width: 100%;margin: 10px auto;padding: 0px 10px;">
+                    <div>
                         <div
-                            style="width: 35px;height: 35px;border-radius: 10px;background-color: #FF844F;margin-right: 10px;line-height: 35px;text-align: center;">
-                            <i class="iconfont iconbeiwanglushili" style="font-size: 15px;color: #fff;">
-                            </i>
+                            style="width:45px;height: 45px;border-radius: 15px;background-color: #F1F5FE;line-height: 45px;text-align: center;margin-bottom: 5px;">
+                            <i class="iconfont iconziyuan154" style="font-size: 25px;color: #1AAFB0;"></i>
                         </div>
-                        <div
-                            style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 80%;border-bottom: 1px solid  #E6EFFB;">
-                            <p style="font-size: 0.9em;color: #303E65;font-weight: 600;padding:0px ;margin: 0px;">想法备忘录
-                            </p>
-                            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
-                        </div>
+                        <p style="padding:0px;margin: 0px;font-weight: 600;font-size: 0.5em;">工作日志</p>
                     </div>
-                    <div
-                        style="display: flex;flex-direction: row;align-items: center;
-                                                                            height: 40px;line-height:40px;width: 100%;margin: 10px auto;padding: 0px 10px;">
+                    <div>
                         <div
-                            style="width: 35px;height: 35px;border-radius: 10px;background-color: #FA5A7D;margin-right: 10px;line-height: 35px;text-align: center;">
-                            <i class="iconfont iconwenxianliutong" style="font-size: 15px;color: #fff;">
-                            </i>
+                            style="width:45px;height: 45px;border-radius: 15px;background-color: #F1F5FE;line-height: 45px;text-align: center;margin-bottom: 5px;">
+                            <i class="iconfont iconjilumian" style="font-size: 25px;color: #1AAFB0;"></i>
                         </div>
+                        <p style="padding:0px;margin: 0px;font-weight: 600;font-size: 0.5em;">进展记录</p>
+                    </div>
+                    <div>
                         <div
-                            style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 80%;border-bottom: 1px solid  #E6EFFB;">
-                            <p style="font-size: 0.9em;color: #303E65;font-weight: 600;padding:0px ;margin: 0px;">文献日志
-                            </p>
-                            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
+                            style="width:45px;height: 45px;border-radius: 15px;background-color: #F1F5FE;line-height: 45px;text-align: center;margin-bottom: 5px;">
+                            <i class="iconfont iconbeiwanglushili" style="font-size: 25px;color: #1AAFB0;"></i>
                         </div>
+                        <p style="padding:0px;margin: 0px;font-weight: 600;font-size: 0.5em;">备忘录</p>
+                    </div>
+                    <div>
+                        <div
+                            style="width:45px;height: 45px;border-radius: 15px;background-color: #F1F5FE;line-height: 45px;text-align: center;margin-bottom: 5px;">
+                            <i class="iconfont iconwenxianliutong" style="font-size: 18px;color: #1AAFB0;"></i>
+                        </div>
+                        <p style="padding:0px;margin: 0px;font-weight: 600;font-size: 0.5em;">文献日志</p>
                     </div>
 
 
@@ -350,68 +450,42 @@
 
             </div>
             <div id="part3">
-                <p style="padding: 0px;margin: 0px 15px ;font-size: 0.8em;font-weight: 600;color: #303E65;">学术交流</p>
+                <p style="padding: 0px;margin: 10px 5px;font-size: 0.8em;font-weight: 600;color: #303E65;">学术交流</p>
                 <div id="containers3">
-                    <div
-                        style="display: flex;flex-direction: row;align-items: center;
-                                                                    height: 40px;line-height:40px;width: 100%;margin: 10px auto;padding: 0px 10px;">
-                        <div
-                            style="width: 35px;height: 35px;border-radius: 10px;background-color: #5675E3;margin-right: 10px;line-height: 35px;text-align: center;">
-                            <i class="iconfont iconhuiyishi2" style="font-size: 18px;color: #fff;">
-                            </i>
-                        </div>
-                        <div
-                            style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 80%;border-bottom: 1px solid  #E6EFFB;">
-                            <p style="font-size: 0.9em;color: #303E65;font-weight: 600;padding:0px ;margin: 0px;">会议活动
-                            </p>
-                            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
-                        </div>
-                    </div>
-                    <div
-                        style="display: flex;flex-direction: row;align-items: center;
-                                                                                        height: 40px;line-height:40px;width: 100%;margin: 10px auto;padding: 0px 10px;">
-                        <div
-                            style="width: 35px;height: 35px;border-radius: 10px;background-color: #22B07D;margin-right: 10px;line-height: 35px;text-align: center;">
-                            <i class="iconfont iconjiaoliuxuanzhong" style="font-size: 25px;color: #fff;">
-                            </i>
-                        </div>
-                        <div
-                            style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 80%;border-bottom: 1px solid  #E6EFFB;">
-                            <p style="font-size: 0.9em;color: #303E65;font-weight: 600;padding:0px ;margin: 0px;">交流方向
-                            </p>
-                            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
-                        </div>
-                    </div>
 
-
-                    <div
-                        style="display: flex;flex-direction: row;align-items: center;
-                                                                                        height: 40px;line-height:40px;width: 100%;margin: 10px auto;padding: 0px 10px;">
+                    <div style="margin-right:20px ;">
                         <div
-                            style="width: 35px;height: 35px;border-radius: 10px;background-color: #FF7593;margin-right: 10px;line-height: 35px;text-align: center;">
-                            <i class="iconfont iconchanyejishulianmeng" style="font-size: 15px;color: #fff;">
-                            </i>
+                            style="width:45px;height: 45px;border-radius: 15px;background-color: #F1F5FE;line-height: 45px;text-align: center;margin-bottom: 5px;">
+                            <i class="iconfont iconhuiyishi2" style="font-size: 25px;color: #1AAFB0;"></i>
                         </div>
-                        <div
-                            style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;width: 80%;border-bottom: 1px solid  #E6EFFB;">
-                            <p style="font-size: 0.9em;color: #303E65;font-weight: 600;padding:0px ;margin: 0px;">产业合作
-                            </p>
-                            <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
-                        </div>
+                        <p style="padding:0px;margin: 0px;font-weight: 600;font-size: 0.5em;">会议活动</p>
                     </div>
-
+                    <div style="margin-right:20px ;">
+                        <div
+                            style="width:45px;height: 45px;border-radius: 15px;background-color: #F1F5FE;line-height: 45px;text-align: center;margin-bottom: 5px;">
+                            <i class="iconfont iconjiaoliuxuanzhong" style="font-size: 25px;color: #1AAFB0;"></i>
+                        </div>
+                        <p style="padding:0px;margin: 0px;font-weight: 600;font-size: 0.5em;">交流方向</p>
+                    </div>
+                    <div style="margin-right:20px ;">
+                        <div
+                            style="width:45px;height: 45px;border-radius: 15px;background-color: #F1F5FE;line-height: 45px;text-align: center;margin-bottom: 5px;">
+                            <i class="iconfont iconchanyejishulianmeng" style="font-size: 25px;color: #1AAFB0;"></i>
+                        </div>
+                        <p style="padding:0px;margin: 0px;font-weight: 600;font-size: 0.5em;">产业合作</p>
+                    </div>
 
 
                 </div>
 
 
             </div>
+
         </div>
     </div>
     <div id="content2" class="hiddenContent">
         <p id="title2">消息</p>
         <ul>
-
             <a href="chat.html" style="text-decoration: none;">
                 <li>
                     <div>
@@ -425,8 +499,6 @@
                     <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
                 </li>
             </a>
-
-
             <a href="address-book.html" style="text-decoration: none;">
                 <li>
                     <div>
@@ -439,8 +511,6 @@
                     <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
                 </li>
             </a>
-
-
             <a href="messages.html" style="text-decoration: none;color: #444d67;">
                 <li>
                     <div>
@@ -453,8 +523,6 @@
                     <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
                 </li>
             </a>
-
-
             <a href="system-informs.html" style="text-decoration: none;color: #444d67;">
                 <li>
                     <div>
@@ -467,7 +535,6 @@
                     <i class="iconfont iconxialajiantou_huaban1" style="font-size: 35px;color: #7C8DB5;"></i>
                 </li>
             </a>
-
         </ul>
 
     </div>
@@ -492,21 +559,34 @@
             </div>
         </div>
 
-        <div class="calendar">
-            <div class="header">
-                <a data-action="prev-month" href="javascript:void(0)" title="Previous Month"><i></i></a>
-                <div class="text" data-render="month-year"></div>
-                <a data-action="next-month" href="javascript:void(0)" title="Next Month"><i></i></a>
-            </div>
-            <div class="months" data-flow="left">
-                <div class="month month-a">
-                    <div class="render render-a"></div>
-                </div>
-                <div class="month month-b">
-                    <div class="render render-b"></div>
-                </div>
-            </div>
+
+        <div class="cldBody">
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="7">
+                            <div class="top">
+                                <span id="left">&lt;</span>
+                                <span id="topDate"></span>
+                                <span id="right">&gt;</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="week">
+                        <td>日</td>
+                        <td>一</td>
+                        <td>二</td>
+                        <td>三</td>
+                        <td>四</td>
+                        <td>五</td>
+                        <td>六</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
         </div>
+
+
     </div>
     <div id="content4" class="hiddenContent">
         <!--title-->
@@ -797,7 +877,7 @@
 
 
 
-    <script src="js/index.js" charset="utf-8"></script>
+
     <script src="dist/dragula.min.js" charset="utf-8"></script>
     <script>
 
@@ -822,6 +902,86 @@
         var drake1 = dragula([document.querySelector('#containers1')])
         var drake2 = dragula([document.querySelector('#containers2')])
         var drake3 = dragula([document.querySelector('#containers3')])
+
+
+
+
+
+        ////////////日历//////////////////////////////////////////////////
+        var date = new Date();
+        var year = date.getFullYear();
+        var nowYear = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var nowMonth = date.getMonth() + 1;
+        var day = date.getDate();
+        var today = year + '年' + month + '月';
+        $('#topDate').text(today)
+
+
+
+        function showCld() {
+            var monthDay = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];  // 创建数组存放每个月有多少天 ,默认2月为28天
+            // 判断闰年
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                monthDay[1] = 29;
+            }
+            // 计算每个月的天数
+            var days = monthDay[month - 1];
+            // 判断每月第一天为周几
+            date.setYear(year);        //某年
+            date.setMonth(month - 1);   //某年的某月
+            date.setDate(1);   // 某月的某天
+            var weekday = date.getDay();  // 判断某天是周几
+            // 补齐一号前的空格
+            var tbodyHtml = '<tr>';
+            for (var i = 0; i < weekday; i++) {
+                tbodyHtml += "<td></td>";
+            }
+            // 补齐每月的日期
+            var changLine = weekday;
+            var tagClass = '';
+            for (i = 1; i <= days; i++) {//每一个日期的填充
+                if (year == nowYear && month == nowMonth && i == day) {
+                    tagClass = "curDate";//当前日期对应格子
+                } else {
+                    tagClass = "isDate";
+                }
+                tbodyHtml += "<td class=" + tagClass + ">" + i + "</td>";
+                changLine = (changLine + 1) % 7;
+                if (changLine == 0 && i != days) {//是否换行填充的判断
+                    tbodyHtml += "</tr><tr>";
+                }
+            }
+            $('#tbody').empty();   // 清空原有的内容
+            $('#tbody').append(tbodyHtml);   //添加当前月份的日期内容
+        }
+
+
+
+        // 设置按钮点击事件
+        $('#left').click(function () {
+            month = month - 1;
+            if (month < 1) {
+                month = 12;
+                year--;
+            }
+            var today = year + '年' + month + '月';
+            $('#topDate').text(today);
+            showCld();
+        });
+
+        $('#right').click(function () {
+            month = month + 1;
+            if (month > 12) {
+                month = 1;
+                year++;
+            }
+            var today = year + '年' + month + '月';
+            $('#topDate').text(today);
+            showCld();
+        })
+        showCld();  //页面加载后执行函数
+
     </script>
 
 
